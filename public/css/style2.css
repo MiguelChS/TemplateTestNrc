@@ -33,15 +33,15 @@ body{
 .colorTurno{
     background-color: #0084c2;
     height: 100%;
-    border-bottom: 1px solid;
-    border-left: 1px solid;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
 }
 .colorPuesto{
     background-color: #189dde;
     height: 100%;
-    border-bottom: 1px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
 }
 
 .colorPuesto,.colorTurno{
@@ -63,4 +63,7 @@ body{
 }
 .fontTirle{
     font-size: 30px;
+}
+.oculto{
+    display: none;
 }
