@@ -1,0 +1,60 @@
+html{
+    height: 99.7%;
+    width: 99.8%;
+}
+body,body>div{
+    height: 100%;
+}
+body>div{
+    text-align: center;
+    margin-top: 2px;
+    font-size: 49px;
+    font-weight: bold;
+}
+body>div>div{
+    height: 18%;
+}
+body>div>div.first{
+    height: 28%;
+}
+body>div>div>div{
+    height: 100%;
+}
+body>div>div.first>div[content-type="title"]{
+    height: 30%;
+}
+body>div>div.first>div[content-type="turno"]{
+    height: 70%;
+    border-bottom: 0px;
+}
+body{
+    color: white;
+}
+
+.colorTurno{
+    background-color: #0084c2;
+    height: 100%;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+.colorPuesto{
+    background-color: #189dde;
+    height: 100%;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.colorPuesto,.colorTurno{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.notBorderBottom{
+    border-bottom: 0 transparent;
+}
+.firstText{
+    font-size: 100px;
+}

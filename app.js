@@ -4,15 +4,13 @@
 var express = require("express");
 var app = express();
 var router = express.Router();
-var fs = require("fs");
 
 app.use(express.static(__dirname + '/public'));
-
 
 app.use(router);
 
 router.get("/turno",function (req,res) {
-    res.send("in process :(");
+    res.sendfile("./public/turno.html");
 });
 
 router.get("/",function (req,res) {
