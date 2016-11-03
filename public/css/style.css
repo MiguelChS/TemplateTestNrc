@@ -1,0 +1,24 @@
+.row{
+    margin-right: -13px;
+    margin-left: -13px;
+    margin-top: 3px;
+}
+#muestra{
+    text-align: center;
+    display: none;
+}
+body,body>div{
+    height: 100%;
+}
+html{
+    height: 99%;
+}
+body > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+body > div > div > div{
+    width: 100%;
+}
