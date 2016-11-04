@@ -66,3 +66,6 @@ body{
 .oculto{
     display: none;
 }
+.boldm{
+    font-weight: bold;
+}
