@@ -2,7 +2,7 @@
  * Created by Miguel on 2/11/2016.
  */
 $(document).ready(function () {
-   $(".btn").click(function(){
+   $(".btnew").click(function(){
        var ficha=document.getElementById('muestra');
        var ventimp=window.open('','popimpr');
        ventimp.document.write(ficha.innerHTML);

@@ -34,4 +34,11 @@ button{
     background-color: #0084c2 !important;
     font-size: 28px !important;
     font-weight: bold !important;
+    text-decoration: none !important;
+    border-radius: 0 !important;
+}
+
+button:active{
+    background-color: white !important;
+    color: #0084c2 !important;
 }
