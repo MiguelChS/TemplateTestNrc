@@ -29,4 +29,9 @@ body > div > div > div{
 }
 button{
     margin-top: 30px !important;
+    color: white !important;
+    height: 70px;
+    background-color: #0084c2 !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
 }
