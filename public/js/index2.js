@@ -19,11 +19,12 @@ function Example(){
         StartParpadeo();
         //eliminar el turno de la ultima fila
         EliminarUltimoTurno(function () {
-            AgregarTurnoDesplazado(oldTurno);
+
         });
+        AgregarTurnoDesplazado(oldTurno);
         //agregar el principio el turno que fue remplazado
         //;
-    },10000);
+    },20000);
 }
 
 function parpadear() {
@@ -66,7 +67,7 @@ function CargarNuevoTurno(turno){
 
 function EliminarUltimoTurno(callback){
     var $ultimo = $(".container-fluid").children().eq(4);
-    $ultimo.effect("drop", {}, 1000, function(){
+    $ultimo.effect("blind", { direction: "down" }, 1000, function(){
         $ultimo.remove();
         callback();
     });
@@ -89,7 +90,6 @@ function AgregarTurnoDesplazado(oldTurno){
         })
     });
     $(".first").after($row);
-    $row.show("drop",{},1000,function(){
-
+    $row.show("blind",{ direction: "up" },1000,function(){
     });
 }
