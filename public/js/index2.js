@@ -10,8 +10,8 @@ function Example(){
     setInterval(function () {
         //generar el turno
         var turno = {
-            puesto:`0${(Math.floor(Math.random() * 9) + 1)}`,
-            turno: `${letra[((Math.floor(Math.random()*3)))]}${Math.floor(Math.random() * 300) + 1}`
+            puesto:"0"+(Math.floor(Math.random() * 9) + 1),
+            turno: letra[((Math.floor(Math.random()*3)))]+(Math.floor(Math.random() * 300) + 1)
         }
         //cargar el nuevo turno
         var oldTurno =CargarNuevoTurno(turno);
@@ -19,12 +19,11 @@ function Example(){
         StartParpadeo();
         //eliminar el turno de la ultima fila
         EliminarUltimoTurno(function () {
-
+            AgregarTurnoDesplazado(oldTurno);
         });
-        AgregarTurnoDesplazado(oldTurno);
         //agregar el principio el turno que fue remplazado
         //;
-    },20000);
+    },10000);
 }
 
 function parpadear() {
@@ -46,7 +45,7 @@ function StartParpadeo() {
     var parpadeo = setInterval(function () {
         parpadear();
         cont++;
-        if(cont == 8){
+        if(cont == 10){
             clearInterval(parpadeo);
         }
     },300);
@@ -62,12 +61,12 @@ function CargarNuevoTurno(turno){
     }
     $turno.text(turno.turno);
     $puesto.text(turno.puesto);
-    return Object.assign(turnoOld);
+    return turnoOld;
 }
 
 function EliminarUltimoTurno(callback){
     var $ultimo = $(".container-fluid").children().eq(4);
-    $ultimo.effect("blind", { direction: "down" }, 1000, function(){
+    $ultimo.effect("drop", {}, 1000, function(){
         $ultimo.remove();
         callback();
     });
@@ -90,6 +89,6 @@ function AgregarTurnoDesplazado(oldTurno){
         })
     });
     $(".first").after($row);
-    $row.show("blind",{ direction: "up" },1000,function(){
+    $row.show("drop",{},1000,function(){
     });
 }
