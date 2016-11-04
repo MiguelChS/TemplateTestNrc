@@ -23,7 +23,7 @@ function Example(){
         });
         //agregar el principio el turno que fue remplazado
         //;
-    },10000);
+    },20000);
 }
 
 function parpadear() {
